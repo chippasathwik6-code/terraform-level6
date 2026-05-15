@@ -18,6 +18,6 @@ resource "aws_instance" "vm" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "done"
+    Name = "sleep"
   }
 }
