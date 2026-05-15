@@ -7,6 +7,6 @@ resource "aws_instance" "vm" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "Level6-VM"
+    Name = "done sleep"
   }
 }
