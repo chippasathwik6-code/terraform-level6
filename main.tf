@@ -2,11 +2,21 @@ provider "aws" {
   region = "us-east-1"
 }
 
+data "aws_ami" "ubuntu" {
+  most_recent = true
+  owners      = ["099720109477"] # Canonical (Ubuntu)
+
+  filter {
+    name   = "name"
+    values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
+  }
+}
+
 resource "aws_instance" "vm" {
-  ami           = "ami-0c7217cdde317cfec"
+  ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
 
   tags = {
-    Name = "done sleep"
+    Name = "done-sleep"
   }
 }
