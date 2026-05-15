@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "us-east-2"
 }
 
 resource "aws_instance" "vm" {
@@ -7,6 +7,6 @@ resource "aws_instance" "vm" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "Level6-VM"
+    Name = "done"
   }
 }
