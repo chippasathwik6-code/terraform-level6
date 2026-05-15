@@ -7,7 +7,7 @@ variable "instance_type" {
 }
 
 variable "name" {
-  default = "Level6-VM"
+  default = "done done"
 }
 
 resource "aws_instance" "vm" {
